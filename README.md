@@ -39,5 +39,8 @@ There are no strict query limits, however if you send more than 2 requests per s
 
 I would strongly suggest using some form of cache.
 
+## To do
+- Allow devs to choose format (raw, xml, json)
+
 ## License
 This is free and unencumbered software released into the public domain. See UNLICENSE for more details.
