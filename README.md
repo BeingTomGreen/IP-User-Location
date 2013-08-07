@@ -21,7 +21,6 @@ Example response:
     longitude => "-0.12574"
     timeZone => "+01:00"
 
-
 ### Country based information (getCountry())
 Returns country level information about an IP address. Obviously this is faster than retrieving city level information.
 
