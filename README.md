@@ -9,28 +9,32 @@ Returns city level information about an IP address.
 
 Example response:
 
-    statusCode => "OK"
-    statusMessage => ""
-    ipAddress => "81.149.15.65"
-    countryCode => "GB"
-    countryName => "UNITED KINGDOM"
-    regionName => "ENGLAND"
-    cityName => "LONDON"
-    zipCode => "-"
-    latitude => "51.5085"
-    longitude => "-0.12574"
-    timeZone => "+01:00"
+```
+statusCode => "OK"
+statusMessage => ""
+ipAddress => "81.149.15.65"
+countryCode => "GB"
+countryName => "UNITED KINGDOM"
+regionName => "ENGLAND"
+cityName => "LONDON"
+zipCode => "-"
+latitude => "51.5085"
+longitude => "-0.12574"
+timeZone => "+01:00"
+```
 
 ### Country based information (getCountry())
 Returns country level information about an IP address. Obviously this is faster than retrieving city level information.
 
 Example response:
 
-    statusCode => "OK"
-    statusMessage => ""
-    ipAddress => "81.149.15.65"
-    countryCode => "GB"
-    countryName => "UNITED KINGDOM"
+```
+statusCode => "OK"
+statusMessage => ""
+ipAddress => "81.149.15.65"
+countryCode => "GB"
+countryName => "UNITED KINGDOM"
+```
 
 ## API keys & query limits
 You can get a (free) API key [here](http://ipinfodb.com/register.php), obviously this should be kept private.
