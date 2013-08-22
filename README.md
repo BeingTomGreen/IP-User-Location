@@ -47,4 +47,5 @@ I would strongly suggest using some form of cache.
 - Allow devs to choose format (raw, xml, json)
 
 ## License
-This is free and unencumbered software released into the public domain. See UNLICENSE for more details.
+
+This is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
