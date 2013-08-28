@@ -40,6 +40,9 @@ Example json response:
 }
 ```
 
+### Validate an IP Address (validIP())
+Checks to see if the specified IP Address is valid.
+
 ## API keys & query limits
 You can get a (free) API key [here](http://ipinfodb.com/register.php), obviously this should be kept private.
 
