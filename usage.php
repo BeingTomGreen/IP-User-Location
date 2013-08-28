@@ -12,7 +12,7 @@ require_once 'key.key.php';
 // Create a new instance
 $ipInfo = new ipInfo (APIKEY);
 
-$userIP = $ipInfo->getIpAddress();
+$userIP = $ipInfo->getIPAddress();
 
 //var_dump($ipInfo->getCity($userIP));
 var_dump($ipInfo->getCountry($userIP));

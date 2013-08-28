@@ -162,7 +162,7 @@ class ipInfo {
 		* @return string/false - the users IP address or false
 		*
 		*/
-	public function getIpAddress()
+	public function getIPAddress()
 	{
 		// Try REMOTE_ADDR
 		if (isset($_SERVER['REMOTE_ADDR']) and $_SERVER['REMOTE_ADDR'] != '')
