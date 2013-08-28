@@ -1,10 +1,9 @@
 <?php
-
 /**
 	*
 	* @author Tom Green <tom@beingtomgreen.com>
 	* @link https://bitbucket.org/BeingTomGreen/ip-detection
-	* @license UNLICENSE
+	* @license MIT
 	*
 	* A basic PHP wrapper for the integrating the IP based location into your application.
 	* Uses IP Info DB <http://ipinfodb.com/>
