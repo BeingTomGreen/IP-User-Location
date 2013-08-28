@@ -40,7 +40,7 @@ Example json response:
 }
 ```
 
-### Validate an IP Address (validIP())
+### Validate an IP address (validIP())
 Checks to see if the specified IP Address is valid.
 
 ## API keys & query limits
