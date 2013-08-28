@@ -43,6 +43,11 @@ Example json response:
 ### Validate an IP address (validIP())
 Checks to see if the specified IP Address is valid.
 
+### Get the user's IP address (getIpAddress())
+Returns the users IP address.
+
+**You shouldn't be trusting a user based this data, HTTP headers can be faked trivially**
+
 ## API keys & query limits
 You can get a (free) API key [here](http://ipinfodb.com/register.php), obviously this should be kept private.
 

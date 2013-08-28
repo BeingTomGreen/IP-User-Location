@@ -152,4 +152,36 @@ class ipInfo {
 	{
 		return filter_var($ip, FILTER_VALIDATE_IP);
 	}
+
+	/**
+		* getIpAddress
+		*
+		* Returns the users IP Address
+		* This data shouldn't be trusted. Faking HTTP headers is trivial.
+		*
+		* @return string/false - the users IP address or false
+		*
+		*/
+	public function getIpAddress()
+	{
+		// Try REMOTE_ADDR
+		if (isset($_SERVER['REMOTE_ADDR']) and $_SERVER['REMOTE_ADDR'] != '')
+		{
+			return $_SERVER['REMOTE_ADDR'];
+		}
+		// Fall back to HTTP_CLIENT_IP
+		elseif (isset($_SERVER['HTTP_CLIENT_IP']) and $_SERVER['HTTP_CLIENT_IP'] != '')
+		{
+			return $_SERVER['HTTP_CLIENT_IP'];
+		}
+		// Finally fall back to HTTP_X_FORWARDED_FOR
+		// I'm aware this can sometimes pass the users LAN IP, but it is a last ditch attempt
+		elseif (isset($_SERVER['HTTP_X_FORWARDED_FOR']) and $_SERVER['HTTP_X_FORWARDED_FOR'] != '')
+		{
+			return $_SERVER['HTTP_X_FORWARDED_FOR'];
+		}
+
+		// No IP address? Return false
+		return false;
+	}
 }
