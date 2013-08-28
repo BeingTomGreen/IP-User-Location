@@ -7,7 +7,7 @@ error_reporting(-1);
 require_once 'ipinfo.inc.php';
 
 // Get the API key, you could set this anywhere..
-require_once 'key.inc.php';
+require_once 'key.key.php';
 
 // Create a new instance
 $ipInfo = new ipInfo (APIKEY);
