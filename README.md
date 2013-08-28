@@ -1,6 +1,6 @@
-# IP Info
+# IP User Location
 
-A basic PHP wrapper for integrating IP based user location detection into your application.
+A basic PHP wrapper for adding IP based user location detection into your application.
 
 ## Methods
 
@@ -43,8 +43,10 @@ There are no strict query limits, however if you send more than 2 requests per s
 
 I would strongly suggest using some form of cache.
 
-## To do
+## Todo
 - Allow devs to choose format (raw, xml, json)
+- Add getIP() method?
+- ~~ [Allow devs to choose API version](https://github.com/BeingTomGreen/IP-User-Location/commit/1a698e07d7ba6c7a3f190e0bad91f22e83694fc1) ~~
 
 ## License
 
