@@ -22,7 +22,8 @@ class ipInfo {
 	/**
 		* __construct
 		*
-		* @param string $apiKey - Your API Key
+		* @param string $apiKey - Your API key
+		* @param string $version - The API version you want to use
 		*
 		*/
 	function __construct($apiKey, $version = 'v3')
