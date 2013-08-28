@@ -44,6 +44,7 @@ There are no strict query limits, however if you send more than 2 requests per s
 I would strongly suggest using some form of cache.
 
 ## Todo
+- Allow devs not to pass an IP address (since it isn't require by the API)
 - Allow devs to choose format (raw, xml, json)
 - Add getIP() method?
 - ~~[Allow devs to choose API version](https://github.com/BeingTomGreen/IP-User-Location/commit/1a698e07d7ba6c7a3f190e0bad91f22e83694fc1)~~
