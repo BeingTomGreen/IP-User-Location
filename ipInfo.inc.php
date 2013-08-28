@@ -114,7 +114,7 @@ class ipInfo {
 			if ($data['statusCode'] != 'OK' or $data['statusMessage'] != '')
 			{
 				// API error - make a note of it and return false
-				error_log('API error: '. $data['statusCode'] .' - '. $data['statusMessage'] .' ('. $this->apiKey .').');
+				error_log('API error: '. $data['statusCode'] .' - '. $data['statusMessage'] .' (URL: '. $url .' API key: '. $this->apiKey .').');
 				return false;
 			}
 			// No errors - cache and return the data
