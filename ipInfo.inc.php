@@ -13,6 +13,9 @@ class ipInfo {
 	// Holds the API Key
 	private $apiKey = null;
 
+	// Hold the type of data we want to return
+	private $apiFormat = null;
+
 	// Hold the version of the API we are working with
 	private $apiVersion = null;
 
@@ -23,13 +26,17 @@ class ipInfo {
 		* __construct
 		*
 		* @param string $apiKey - Your API key
+		* @param string $format - The type of data we want to return
 		* @param string $version - The API version you want to use
 		*
 		*/
-	function __construct($apiKey, $version = 'v3')
+	function __construct($apiKey, $format = 'raw', $version = 'v3')
 	{
 		// Save the API key
 		$this->apiKey = $apiKey;
+
+		// Save the API format
+		$this->apiFormat = $format;
 
 		// Save the API version
 		$this->apiVersion = $version;
@@ -42,7 +49,7 @@ class ipInfo {
 		*
 		* @param string $ip - the users IP address
 		*
-		* @return array/false - data if we have it, otherwise false
+		* @return string/false - data if we have it, otherwise false
 		*
 		*/
 	public function getCountry($ip)
@@ -57,7 +64,7 @@ class ipInfo {
 		*
 		* @param string $ip - the users IP address
 		*
-		* @return array/false - data if we have it, otherwise false
+		* @return string/false - data if we have it, otherwise false
 		*
 		*/
 	public function getCity($ip)
@@ -73,7 +80,7 @@ class ipInfo {
 		* @param string $ip - The users IP Address
 		* @param string $endpoint - The API endpoint we wish to query
 		*
-		* @return array/bool - data if we have it, otherwise false
+		* @return string/bool - data if we have it, otherwise false
 		*
 		*/
 	private function execute($ip, $endpoint)
@@ -86,7 +93,7 @@ class ipInfo {
 		}
 
 		// Build the URL
-		$url = $this->apiURL . $this->apiVersion .'/'. $endpoint .'/?key='. $this->apiKey .'&ip='. $ip .'&format=json';
+		$url = $this->apiURL . $this->apiVersion .'/'. $endpoint .'/?key='. $this->apiKey .'&ip='. $ip .'&format='. $this->apiFormat;
 
 		// Initialise CURL
 		$handle = curl_init();
@@ -94,36 +101,40 @@ class ipInfo {
 		// Set the CURL options we need
 		curl_setopt($handle, CURLOPT_URL, $url);
 		curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
+		//curl_setopt($handle, CURLOPT_HEADER, 1);
 
 		// Grab the data
 		$data = curl_exec($handle);
 
-		// Grab the CURL error code and message
+		// Grab the CURL error code and message as well as the HTTP Code
 		$errorCode = curl_errno($handle);
 		$errorMessage = curl_error($handle);
+		$httpCode = curl_getinfo($handle, CURLINFO_HTTP_CODE);
 
 		// Close the CURL connection
 		curl_close($handle);
 
-		// Check our error code is 0 (0 means OK!)
-		if ($errorCode == 0)
+		// Check that we got a good HTTP response code
+		if ($httpCode == '200')
 		{
-			// Decode the json response
-			$data = json_decode($data, true);
-
-			// Check we don't have an error code
-			if ($data['statusCode'] != 'OK' or $data['statusMessage'] != '')
-			{
-				// API error - make a note of it and return false
-				error_log('API error: '. $data['statusCode'] .' - '. $data['statusMessage'] .' (URL: '. $url .' API key: '. $this->apiKey .').');
-				return false;
-			}
-			// No errors - cache and return the data
-			else
+			// Check our CURL error code is 0 (0 means OK!)
+			if ($errorCode == 0)
 			{
 				// Return the data
 				return $data;
 			}
+			// Curl Error
+			else
+			{
+				error_log('CURL error: '. $errorMessage .' (URL: '. $url .').');
+				return false;
+			}
+		}
+		// Bad HTTP response code
+		else
+		{
+			error_log('Bad HTTP response: '. $httpCode .' (URL: '. $url .').');
+			return false;
 		}
 	}
 

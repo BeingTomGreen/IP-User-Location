@@ -7,33 +7,37 @@ A basic PHP wrapper for adding IP based user location detection into your applic
 ### City based information (getCity())
 Returns city level information about an IP address.
 
-Example response:
+Example json response:
 
 ```
-statusCode => "OK"
-statusMessage => ""
-ipAddress => "81.149.15.65"
-countryCode => "GB"
-countryName => "UNITED KINGDOM"
-regionName => "ENGLAND"
-cityName => "LONDON"
-zipCode => "-"
-latitude => "51.5085"
-longitude => "-0.12574"
-timeZone => "+01:00"
+{
+  "statusCode" : "OK",
+  "statusMessage" : "",
+  "ipAddress" : "81.149.15.65",
+  "countryCode" : "GB",
+  "countryName" : "UNITED KINGDOM",
+  "regionName" : "ENGLAND",
+  "cityName" : "SALISBURY",
+  "zipCode" : "SP1 1TP",
+  "latitude" : "51.0693",
+  "longitude" : "-1.79569",
+  "timeZone" : "+01:00"
+}
 ```
 
 ### Country based information (getCountry())
 Returns country level information about an IP address. Obviously this is faster than retrieving city level information.
 
-Example response:
+Example json response:
 
 ```
-statusCode => "OK"
-statusMessage => ""
-ipAddress => "81.149.15.65"
-countryCode => "GB"
-countryName => "UNITED KINGDOM"
+{
+  "statusCode" : "OK",
+  "statusMessage" : "",
+  "ipAddress" : "81.149.15.65",
+  "countryCode" : "GB",
+  "countryName" : "UNITED KINGDOM"
+}
 ```
 
 ## API keys & query limits
