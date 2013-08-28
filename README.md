@@ -49,7 +49,7 @@ I would strongly suggest using some form of cache.
 
 ## Todo
 - Allow devs not to pass an IP address (since it isn't require by the API)
-- Allow devs to choose format (raw, xml, json)
+- ~~[Allow devs to choose format (raw, xml, json)](https://github.com/BeingTomGreen/IP-User-Location/commit/b98be870b9ab725eaa49b09934eb6da26a8a3c18)~~
 - Add getIP() method?
 - ~~[Allow devs to choose API version](https://github.com/BeingTomGreen/IP-User-Location/commit/1a698e07d7ba6c7a3f190e0bad91f22e83694fc1)~~
 
