@@ -27,11 +27,11 @@ class ipInfo {
 		*/
 	function __construct($apiKey, $version = 'v3')
 	{
-		// Save the API Key
+		// Save the API key
 		$this->apiKey = $apiKey;
 
 		// Save the API version
-		$this->version = $version;
+		$this->apiVersion = $version;
 	}
 
 	/**
