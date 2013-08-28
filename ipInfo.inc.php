@@ -14,8 +14,7 @@ class ipInfo {
 	private $apiKey = null;
 
 	// Hold the version of the API we are working with
-	// Fixed to v3 for now
-	private $apiVersion = 'v3';
+	private $apiVersion = null;
 
 	// Hold the API URL
 	private $apiURL = 'http://api.ipinfodb.com/';
@@ -26,10 +25,13 @@ class ipInfo {
 		* @param string $apiKey - Your API Key
 		*
 		*/
-	function __construct($apiKey)
+	function __construct($apiKey, $version = 'v3')
 	{
 		// Save the API Key
 		$this->apiKey = $apiKey;
+
+		// Save the API version
+		$this->version = $version;
 	}
 
 	/**
