@@ -6,8 +6,8 @@ This wapper uses the [IP Info DB API](http://ipinfodb.com/ip_location_api.php)
 
 ### Methods
 
-#### City based information (getCity())
-Returns city level information about an IP address.
+#### Get city based information
+You can use `->getCity($ip)` to retrive city level information about an IP address.
 
 Example json response:
 
@@ -27,8 +27,8 @@ Example json response:
 }
 ```
 
-#### Country based information (getCountry())
-Returns country level information about an IP address. Obviously this is faster than retrieving city level information.
+#### Get country based information
+You can use `->getCountry($ip)` to retrive country level information about an IP address. Obviously this is faster than retrieving city level information.
 
 Example json response:
 
@@ -42,11 +42,11 @@ Example json response:
 }
 ```
 
-#### Validate an IP address (validIP())
-Checks to see if the specified IP Address is valid.
+#### Validate an IP address
+You can use `->validIP($ip)` to see if the specified IP Address is valid.
 
-#### Get the user's IP address (getIpAddress())
-Returns the users IP address.
+#### Get the user's IP address
+You can use `->getIpAddress()` to retrive the users IP address.
 
 **You shouldn't be trusting a user based this data, HTTP headers can be faked trivially**
 
