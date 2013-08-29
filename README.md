@@ -2,7 +2,7 @@
 
 A basic PHP wrapper for adding IP based user location detection into your application.
 
-This wapper uses the [IP Info DB API](http://ipinfodb.com/ip_location_api.php)
+This wapper uses the [IP Info DB API](http://ipinfodb.com/ip_location_api.php).
 
 ### Methods
 
