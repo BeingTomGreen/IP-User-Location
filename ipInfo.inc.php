@@ -3,7 +3,7 @@
 	*
 	* @author Tom Green <tom@beingtomgreen.com>
 	* @link https://bitbucket.org/BeingTomGreen/ip-detection
-	* @license MIT
+	* @license MIT - http://beingtomgreen.mit-license.org/
 	*
 	* A basic PHP wrapper for the integrating the IP based location into your application.
 	* Uses IP Info DB <http://ipinfodb.com/>
