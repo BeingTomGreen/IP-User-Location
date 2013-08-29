@@ -1,10 +1,10 @@
-# IP User Location
+## IP User Location
 
 A basic PHP wrapper for adding IP based user location detection into your application.
 
-## Methods
+### Methods
 
-### City based information (getCity())
+#### City based information (getCity())
 Returns city level information about an IP address.
 
 Example json response:
@@ -25,7 +25,7 @@ Example json response:
 }
 ```
 
-### Country based information (getCountry())
+#### Country based information (getCountry())
 Returns country level information about an IP address. Obviously this is faster than retrieving city level information.
 
 Example json response:
@@ -40,27 +40,27 @@ Example json response:
 }
 ```
 
-### Validate an IP address (validIP())
+#### Validate an IP address (validIP())
 Checks to see if the specified IP Address is valid.
 
-### Get the user's IP address (getIpAddress())
+#### Get the user's IP address (getIpAddress())
 Returns the users IP address.
 
 **You shouldn't be trusting a user based this data, HTTP headers can be faked trivially**
 
-## API keys & query limits
+### API keys & query limits
 You can get a (free) API key [here](http://ipinfodb.com/register.php), obviously this should be kept private.
 
 There are no strict query limits, however if you send more than 2 requests per second they will be queued. You will still get a response, but it will be slowed to around 1 /second.
 
 I would strongly suggest using some form of cache.
 
-## Todo
+### Todo
 - Allow devs not to pass an IP address (since it isn't require by the API)
 - ~~[Allow devs to choose format (raw, xml, json)](https://github.com/BeingTomGreen/IP-User-Location/commit/b98be870b9ab725eaa49b09934eb6da26a8a3c18)~~
 - ~~[Add getIP() method?](https://github.com/BeingTomGreen/IP-User-Location/commit/28e8d7882a370fb59c0b5ab306bad0ed2fa35b9b)~~ [Function probably needs additional testing](http://stackoverflow.com/questions/1634782/what-is-the-most-accurate-way-to-retrieve-a-users-correct-ip-address-in-php)
 - ~~[Allow devs to choose API version](https://github.com/BeingTomGreen/IP-User-Location/commit/1a698e07d7ba6c7a3f190e0bad91f22e83694fc1)~~
 
-## License
+### License
 
 This is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
