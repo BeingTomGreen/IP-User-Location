@@ -45,6 +45,8 @@ Example json response:
 #### Validate an IP address
 You can use `->validIP($ip)` to see if the specified IP Address is valid.
 
+Under the hood this uses `filter_var($ip, FILTER_VALIDATE_IP)`, I assume this should be pretty solid. If you have any suggestions for a better way of doing this send a pull request or drop me an email.
+
 #### Get the user's IP address
 You can use `->getIpAddress()` to retrive the users IP address.
 
