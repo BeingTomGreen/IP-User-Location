@@ -53,7 +53,7 @@ You can use `->getIpAddress()` to retrive the users IP address.
 ### API keys & query limits
 You can get a (free) API key [here](http://ipinfodb.com/register.php), obviously this should be kept private.
 
-There are no strict query limits, however if you send more than 2 requests per second they will be queued. You will still get a response, but it will be slowed to around 1 /second.
+While there are no strict query limits if you send more than 2 requests per second they will be queued. You will still always get a response, but it will be slowed to around 1 /second.
 
 I would strongly suggest using some form of cache.
 
