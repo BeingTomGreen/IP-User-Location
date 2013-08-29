@@ -181,7 +181,7 @@ class ipInfo {
 			return $_SERVER['HTTP_X_FORWARDED_FOR'];
 		}
 
-		// No IP address? Return false
+		// Nothing? Return false
 		return false;
 	}
 }
