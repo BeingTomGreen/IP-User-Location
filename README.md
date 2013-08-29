@@ -2,12 +2,12 @@
 
 A basic PHP wrapper for adding IP based user location detection into your application.
 
-This wapper uses the [IP Info DB API](http://ipinfodb.com/ip_location_api.php).
+This wrapper uses the [IP Info DB API](http://ipinfodb.com/ip_location_api.php).
 
 ### Methods
 
 #### Get city based information
-You can use `->getCity($ip)` to retrive city level information about an IP address.
+You can use `->getCity($ip)` to retrieve city level information about an IP address.
 
 Example json response:
 
@@ -28,7 +28,7 @@ Example json response:
 ```
 
 #### Get country based information
-You can use `->getCountry($ip)` to retrive country level information about an IP address. Obviously this is faster than retrieving city level information.
+You can use `->getCountry($ip)` to retrieve country level information about an IP address. Obviously this is faster than retrieving city level information.
 
 Example json response:
 
@@ -48,7 +48,7 @@ You can use `->validIP($ip)` to see if the specified IP Address is valid.
 Under the hood this uses `filter_var($ip, FILTER_VALIDATE_IP)`, I assume this should be pretty solid. If you have any suggestions for a better way of doing this send a pull request or drop me an email.
 
 #### Get the user's IP address
-You can use `->getIpAddress()` to retrive the users IP address.
+You can use `->getIpAddress()` to retrieve the users IP address.
 
 **You shouldn't be trusting a user based this data, HTTP headers can be faked trivially**
 
