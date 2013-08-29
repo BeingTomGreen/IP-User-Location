@@ -57,7 +57,18 @@ You can get a (free) API key [here](http://ipinfodb.com/register.php), obviously
 
 While there are no strict query limits if you send more than 2 requests per second they will be queued. You will still always get a response, but it will be slowed to around 1 /second.
 
-I would strongly suggest using some form of cache.
+I would strongly suggest using some form of cache. Cookies (mmm cookies) are probably the easiest way to deal with this:
+
+```php
+// Create a new instance
+$ipInfo = new ipInfo (APIKEY, 'json');
+
+// Grab the user location info
+$location = json_decode($ipInfo->getCountry($userIP));
+
+// Create a cookie holding the country code for 1 hour (3600 seconds)
+setcookie('location', $location['countryCode'], time() + 3600);
+```
 
 ### Todo
 - Allow devs not to pass an IP address (since it isn't require by the API)
