@@ -13,21 +13,21 @@ class ipInfo {
   // Holds the API Key
   private $apiKey = null;
 
-  // Hold the type of data we want to return
+  // Hold the format we want to return the data in
   private $apiFormat = null;
 
   // Hold the version of the API we are working with
   private $apiVersion = null;
 
-  // Hold the API URL
+  // Hold the API URL (should have trailing /)
   private $apiURL = 'http://api.ipinfodb.com/';
 
   /**
     * __construct
     *
     * @param string $apiKey - Your API key
-    * @param string $format - The type of data we want to return
-    * @param string $version - The API version you want to use
+    * @param string $format - The format we want to return the data in
+    * @param string $version - The version of the API we are working with
     *
     */
   function __construct($apiKey, $format = 'raw', $version = 'v3')
@@ -45,7 +45,7 @@ class ipInfo {
   /**
     * getCountry
     *
-    * Returns the Country level location data
+    * Returns country level location data
     *
     * @param string $ip - the users IP address
     *
@@ -60,7 +60,7 @@ class ipInfo {
   /**
     * getCity
     *
-    * Returns the City level location data
+    * Returns city level location data
     *
     * @param string $ip - the users IP address
     *
@@ -77,7 +77,7 @@ class ipInfo {
     *
     * Makes the specified CURL request - this is the meat of the class!
     *
-    * @param string $ip - The users IP Address
+    * @param string $ip - The users IP address
     * @param string $endpoint - The API endpoint we wish to query
     *
     * @return string/bool - data if we have it, otherwise false
@@ -85,7 +85,7 @@ class ipInfo {
     */
   private function execute($ip, $endpoint)
   {
-    // Invalid IP - make a note of it and return false
+    // Invalid IP address - make a note of it and return false
     if ($this->validIP($ip) == false)
     {
       error_log('Invalid IP Address '. $ip);
@@ -101,7 +101,6 @@ class ipInfo {
     // Set the CURL options we need
     curl_setopt($handle, CURLOPT_URL, $url);
     curl_setopt($handle, CURLOPT_RETURNTRANSFER, 1);
-    //curl_setopt($handle, CURLOPT_HEADER, 1);
 
     // Grab the data
     $data = curl_exec($handle);
