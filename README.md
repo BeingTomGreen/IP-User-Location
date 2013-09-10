@@ -71,9 +71,7 @@ setcookie('location', $location['countryCode'], time() + 3600);
 
 ### Todo
 - Allow devs not to pass an IP address (since it isn't require by the API)
-- ~~[Allow devs to choose format (raw, xml, json)](https://github.com/BeingTomGreen/IP-User-Location/commit/b98be870b9ab725eaa49b09934eb6da26a8a3c18)~~
-- ~~[Add getIP() method?](https://github.com/BeingTomGreen/IP-User-Location/commit/28e8d7882a370fb59c0b5ab306bad0ed2fa35b9b)~~ [Function probably needs additional testing](http://stackoverflow.com/questions/1634782/what-is-the-most-accurate-way-to-retrieve-a-users-correct-ip-address-in-php)
-- ~~[Allow devs to choose API version](https://github.com/BeingTomGreen/IP-User-Location/commit/1a698e07d7ba6c7a3f190e0bad91f22e83694fc1)~~
+- The `->getIpAddress()` function [probably needs additional testing](http://stackoverflow.com/questions/1634782/what-is-the-most-accurate-way-to-retrieve-a-users-correct-ip-address-in-php)
 
 ### License
 
