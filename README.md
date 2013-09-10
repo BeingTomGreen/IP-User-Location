@@ -1,8 +1,7 @@
-## IP User Location
+IP User Location
+=======
 
-A basic PHP wrapper for adding IP based user location detection into your application.
-
-This wrapper uses the [IP Info DB API](http://ipinfodb.com/ip_location_api.php).
+A basic PHP wrapper for adding IP based user location detection into your application using the [IP Info DB API](http://ipinfodb.com/ip_location_api.php).
 
 ### Methods
 
