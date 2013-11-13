@@ -49,7 +49,7 @@ Under the hood this uses `filter_var($ip, FILTER_VALIDATE_IP)`, I assume this is
 #### Get the user's IP address
 You can use `->getIpAddress()` to retrieve the users IP address.
 
-**You shouldn't be trusting a user based this data, HTTP headers can be faked trivially**
+**You shouldn't be trusting a user based this data, HTTP headers can be faked, trivially.**
 
 ### API keys & query limits
 You can get a (free) API key [here](http://ipinfodb.com/register.php), obviously this should be kept private.
