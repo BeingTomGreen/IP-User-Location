@@ -72,6 +72,7 @@ setcookie('location', $location['countryCode'], time() + 3600);
 ### Todo
 - Allow devs not to pass an IP address (since it isn't required by the API)
 - The `->getIpAddress()` function [probably needs additional testing](http://stackoverflow.com/questions/1634782/what-is-the-most-accurate-way-to-retrieve-a-users-correct-ip-address-in-php)
+- Composer package this badboy
 
 ### License
 
