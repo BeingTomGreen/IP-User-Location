@@ -3,6 +3,22 @@ IP User Location
 
 A basic PHP wrapper for adding IP based user location detection into your application using the [IP Info DB API](http://ipinfodb.com/ip_location_api.php).
 
+### Installation
+
+Add `beingtomgreen/ipinfo` as a requirement to `composer.json`:
+
+```javascript
+{
+    "require": {
+        "beingtomgreen/ipinfo": "dev-master"
+    }
+}
+```
+
+Update your packages with `composer update` or install with `composer install`.
+
+You can also add the package using `composer require beingtomgreen/ipinfo` and later specifying the version you want.
+
 ### Methods
 
 #### Get city based information
