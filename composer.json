@@ -1,0 +1,15 @@
+{
+    "name": "beingtomgreen/ipinfo",
+    "description": "A basic PHP wrapper for adding IP based user location detection into your application using the IP Info DB API.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Green",
+            "email": "tom@beingtomgreen.com"
+        }
+    ],
+    "require": {},
+    "autoload" : {
+        "classmap": ["ipInfo.inc.php"]
+    }
+}
